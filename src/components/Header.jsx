@@ -9,8 +9,8 @@ import { MdNotifications } from "react-icons/md";
 const Header = () => {
   const pathname = usePathname();
   return (
-    <section className="header-section  md:relative    ">
-      <div className="container hidden md:flex  justify-between  py-5 px-10 md:absolute md:inset text-white  mx-auto gap-x-5">
+    <section className="header-section  md:relative   md:z-50 ">
+      <div className="container hidden md:flex  justify-between  py-5 px-10 md:absolute md:inset text-white  mx-auto gap-x-5 ">
         <div className="w-4/6 lg:w-5/6 flex justify-between items-center   ">
           {pathname === "/" && (
             <h1 className="hidden lg:block  text-xl">DASHBOARD</h1>
@@ -35,7 +35,7 @@ const Header = () => {
             </div>
 
             <input
-              className="border-none bg-custom-gradient py-3 w-48 lg:w-80 text-xl rounded-r-3xl  pl-3"
+              className="border-none bg-transparent py-3 w-48 lg:w-80 text-xl rounded-r-3xl  pl-3"
               type="search"
               placeholder="search"
             />

@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header"
+import Footer from "@/components/Footer"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -21,13 +22,14 @@ export default function RootLayout({
         <aside className=" hidden md:block w-80 h-screen sticky top-0">
          <Sidebar/>
         </aside>
-        <main className="flex-1  ">
+        <main className="flex-1 bg-[#f8f9fe] ">
         
         <Header/>
          
 
-        <div></div>
+        
         {children}
+        <Footer/>
         </main>
        
         </body>
