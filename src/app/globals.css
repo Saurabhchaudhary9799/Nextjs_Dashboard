@@ -65,3 +65,6 @@
   }
 }
 
+.custom-border {
+  border: 2px solid #4a5568; /* Change the border color and thickness as needed */
+}

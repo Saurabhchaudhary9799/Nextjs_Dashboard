@@ -5,7 +5,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import { IoMenu } from "react-icons/io5";
 import { MdNotifications } from "react-icons/md";
-
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 const Header = () => {
   const pathname = usePathname();
   return (
@@ -43,7 +43,10 @@ const Header = () => {
         </div>
         <div className="w-2/6 lg:w-1/6 flex justify-center items-center  gap-x-2 ">
           <span className="text-4xl">
-            <FaRegUserCircle />
+            <Avatar>
+              <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+              <AvatarFallback>CN</AvatarFallback>
+            </Avatar>
           </span>
           <h1 className="text-xl ">Jessica Jones</h1>
         </div>
@@ -54,15 +57,22 @@ const Header = () => {
             <IoMenu />
           </span>
         </div>
-        <div><h1 className="text-3xl font-bold">Brand</h1></div>
+        <div>
+          <h1 className="text-3xl font-bold">Brand</h1>
+        </div>
         <div className="flex text-3xl gap-x-3">
           <div className="flex justify-center items-center">
-            <span><MdNotifications /></span>
-            
+            <span>
+              <MdNotifications />
+            </span>
           </div>
           <div className="flex justify-center items-center">
-            <span><FaRegUserCircle /></span>
-            
+            <span>
+            <Avatar>
+              <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+              <AvatarFallback>CN</AvatarFallback>
+            </Avatar>
+            </span>
           </div>
         </div>
       </div>
